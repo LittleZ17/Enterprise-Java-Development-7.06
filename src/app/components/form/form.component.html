@@ -1,0 +1,41 @@
+<section class="box align">
+  <div class="box1 align">
+    <button
+      class="btns post"
+      (click)="markAllAsPostponed()"
+      [disabled]="isAllPostponed"
+    >
+      Postponed All Task
+    </button>
+    <button
+      class="btns post"
+      (click)="restoreAllTasks()"
+      [disabled]="!isAllPostponed"
+    >
+      Restore Tasks Postponed
+    </button>
+    <button class="btns del" (click)="deleteAllComplete()">
+      Delete all completed tasks
+    </button>
+  </div>
+
+  <div class="box2 align">
+    <input type="text" [placeholder]="msgTitle" [(ngModel)]="taskName" />
+    <button class="btns add" (click)="addTask()">Add Task</button>
+  </div>
+  <h2 class="title">Lista de TO DO</h2>
+  <section>
+    <div *ngFor="let task of taskList" >
+      <div *ngIf="!task.isPostponed" class="task align" [ngClass]="{taskdone: task.isDone === true}">
+          <input type="checkbox" [(ngModel)]="task.isDone" />
+        <h4>{{ task.name }}</h4>
+        <img *ngIf="task.isDone" src="../../../assets/check.svg" alt="" />
+        <button class="btns edit" (click)="editTask(task)">Edit</button>
+        <button class="btns post" (click)="togglePostponed(task)">
+          Postpone
+        </button>
+        <button class="btns del" (click)="deleteTask(task)">Delete</button>
+      </div>
+    </div>
+  </section>
+</section>

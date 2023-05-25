@@ -1,1 +1,110 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+:root {
+  --c-salmon: #F29999;
+  --c-ligthsalmon: #F2C8C4;
+  --c-pink: #F2BBBB;
+  --c-ligthpink:#F2DCDC;
+  --c-grey: rgba(242, 242, 242, 0.4);
+  --c-green: rgba(42, 175, 125, 0.4);
+  --c-blue: rgba(64, 128, 166, 0.7);
+  --c-bg-title: rgba(252, 195, 174, 0.4);
+  --c-orange: #f1a166;
+  
+}
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  background-image: url("https://img.freepik.com/free-vector/pastel-peach-watercolor-background-vector_53876-78025.jpg?w=2000");
+  background-size: cover;
+  color: rgba(32, 31, 31, 0.756);
+}
+
+.btns {
+  min-width: 100px;
+  height: 35px;
+  padding: 5px 10px;
+  font-weight: 00;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 4px #c8d0e7, -1px -1px 3px #fff;
+}
+.btns:active {
+  box-shadow: inset 1px 1px 3px #c8d0e7, inset -1px -1px 3px #fff;
+}
+.post {
+  background-color: var(--c-blue);
+}
+.del {
+  background-color: var(--c-salmon);
+}
+.add {
+  background-color: var(--c-green);
+  height: 90px;
+  width: 90px;
+  border-radius: 50px;
+}
+.edit{
+    background-color: var(--c-orange);
+}
+.align{
+    display: flex;
+    align-items: center;
+}
+.box {
+  flex-direction: column;
+  width: 60vw;
+  border-radius: 15px;
+  padding: 5% 0;
+}
+.box1 {
+  width: 90%;
+  justify-content: space-between;
+  padding: 5% 0;
+}
+.box2 {
+  width: 100%;
+  justify-content: space-evenly;
+}
+.box2 input {
+  width: 200px;
+  height: 40px;
+  border: 2px solid var(--c-orange);
+  border-radius: 15px;
+  padding: 0 5%;
+}
+
+.title {
+  padding: 2% 20%;
+  background-size: cover;
+  background-color: var(--c-bg-title);
+  border-radius: 20px;
+
+}
+.task{
+    justify-content: space-between;
+    height: 40px;
+    margin: 2%;
+    padding: 2% 5%;
+    width: 60vw;
+    background-color: var(--c-grey);
+    border-radius: 25px;
+}
+.task h4{
+    min-width: 200px;
+}
+.taskdone{
+    background-color: var(--c-green);
+}
